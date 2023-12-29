@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "8db85cde-fd3e-4327-a6ba-c7034e270998",
+		"name": "fatmug-design-assignment-api-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28300772"
+	},
+	"item": [
+		{
+			"name": "vendor_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"vendor_code\": \"455463252\",\r\n\"name\": \"preet kumari rai chaudhary\",\r\n\"contact_details\": \"4689665423\",\r\n\"address\": \" kingdom\",\r\n\"on_time_delivery_rate\": 4.5,\r\n\"quality_rating\": 4.0,\r\n\"response_time\": \"03:12:43\",\r\n\"fulfilment_rate\": 3.4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vendors_detail_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/?vendor_id=8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						""
+					],
+					"query": [
+						{
+							"key": "vendor_id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vendor_details_update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"vendor_code\": \"455463252\",\r\n\"name\": \"preet kumari rai chaudhary\",\r\n\"contact_details\": \"4689665423\",\r\n\"address\": \" kingdom\",\r\n\"on_time_delivery_rate\": 4.5,\r\n\"quality_rating\": 4.0,\r\n\"response_time\": \"03:12:43\",\r\n\"fulfilment_rate\": 3.4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/8/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"8",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vendor_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/8/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"8",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchase_order_register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\"po_number\": \"1244698xshdfakrearu55fdg\",\r\n\"order_date\": \"2023-12-31\",\r\n\"items\": {\r\n\"item\": \"rutle\",\r\n\"item2\": \"toy\",\r\n\"item3\": \"snakcer\"\r\n},\r\n\"quantity\": 4,\r\n\"status\": \"pending\",\r\n\"delivery_date\": \"2023-11-05T06:00:00Z\",\r\n\"quality_rating\": 4.0,\r\n\"issue_date\": \"2023-11-05T02:45:00Z\",\r\n\"acknowledgment_date\": \"2023-12-02T19:48:42.039321Z\",\r\n\"vendor\": 8\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_orders/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_orders",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchased_order_list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_orders_list/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_orders_list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchased_order_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_orders/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_orders",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchased_order_update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\"po_number\": \"1244698xshdfakrearu55fdg\",\r\n\"order_date\": \"2023-12-31\",\r\n\"items\": {\r\n\"item\": \"rutle\",\r\n\"item2\": \"toy\",\r\n\"item3\": \"snakcer\"\r\n},\r\n\"quantity\": 4,\r\n\"status\": \"pending\",\r\n\"delivery_date\": \"2023-11-05T06:00:00Z\",\r\n\"quality_rating\": 4.0,\r\n\"issue_date\": \"2023-11-05T02:45:00Z\",\r\n\"acknowledgment_date\": \"2023-12-02T19:48:42.039321Z\",\r\n\"vendor\": 8\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_orders/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_orders",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "purchased_order_delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_orders/7/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_orders",
+						"7",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vendor_performance_api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/vendors/8/performance/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"8",
+						"performance",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "acknowledged_date_and_response_time",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/purchase_orders/7/acknowledge/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_orders",
+						"7",
+						"acknowledge",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
